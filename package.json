@@ -1,0 +1,9 @@
+{
+  "name": "smash-tiles",
+  "private": true,
+  "type": "module",
+  "description": "SMASH TILES game + Stripe payment functions (Vercel)",
+  "engines": {
+    "node": ">=20"
+  }
+}
