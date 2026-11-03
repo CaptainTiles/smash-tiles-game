@@ -2381,9 +2381,9 @@
   .shop-tab[data-cat="balls"]{grid-row:1;grid-column:7 / 10}
   .shop-tab[data-cat="boards"]{grid-row:1;grid-column:10 / 13}
   /* Row 2: 4 tabs, each exactly 1/4 of the width, evenly spaced */
-  .shop-tab[data-cat="coins"]{grid-row:2;grid-column:1 / 4}
-  .shop-tab[data-cat="special"]{grid-row:2;grid-column:4 / 7}
-  .shop-tab[data-cat="wheel"]{grid-row:2;grid-column:7 / 10}
+  .shop-tab[data-cat="coins"]{grid-row:2;grid-column:1 / 5}
+  .shop-tab[data-cat="special"]{grid-row:2;grid-column:5 / 9}
+  .shop-tab[data-cat="wheel"]{grid-row:2;grid-column:9 / 13}
   .shop-tab[data-cat="payments"]{grid-row:2;grid-column:10 / 13}
   .shop-tab[data-cat="sub"]{grid-row:4 !important;grid-column:1 / 13 !important}   /* the Daily Deals tab is row 1, so tabs sit on rows 2 and 3 and this one on row 4 */
   .shop-tab{
@@ -6039,7 +6039,7 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
       <div><span>Score</span><b id="score">0</b></div>
       <div id="coins-wrap"><svg class="coin-ico" viewBox="0 0 32 22" width="42" height="29" style="display:inline-block;vertical-align:middle" aria-label="Coins"><defs><radialGradient id="coinGrad" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#fff6cc"/><stop offset="45%" stop-color="#ffd94a"/><stop offset="80%" stop-color="#e0a500"/><stop offset="100%" stop-color="#a86e00"/></radialGradient></defs><ellipse cx="9" cy="15" rx="8" ry="5.4" fill="#c68400"/><ellipse cx="9" cy="13" rx="8" ry="5.4" fill="url(#coinGrad)" stroke="#a86e00" stroke-width="0.6"/><ellipse cx="17" cy="17" rx="8" ry="5.4" fill="#c68400"/><ellipse cx="17" cy="15" rx="8" ry="5.4" fill="url(#coinGrad)" stroke="#a86e00" stroke-width="0.6"/><ellipse cx="23" cy="12" rx="8" ry="5.4" fill="#c68400"/><ellipse cx="23" cy="10" rx="8" ry="5.4" fill="url(#coinGrad)" stroke="#a86e00" stroke-width="0.6"/><text x="23" y="13.2" text-anchor="middle" font-family="Chakra Petch,sans-serif" font-weight="800" font-size="8" fill="#a86e00">$</text></svg><b id="coins-hud">0</b></div>
       <div><span>Ball Speed</span><b id="spd">100%</b></div>
-      <div id="mode-hud"><span>Mode</span><b>GP $15</b></div>
+      <div id="mode-hud"><span>Mode</span><b>Challenge</b></div>
       <div id="clock"><span>Time</span><b>5:00</b></div>
     </div>
     <div class="ad-slot" id="ad-ingame-wrap">
@@ -6111,13 +6111,13 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
           </button>
           <div id="gptp-action-group">
             <button id="go-gptp" class="mode-btn">
-              <span class="mb-title">Get Paid <span class="cad-label">CAD</span> $15</span>
+              <span class="mb-title">Challenge</span>
               <span class="mb-sub">Fast · 3 lives · 5:00</span>
               <span class="mb-action" id="gptp-action">Sign In</span>
             </button>
-            <a aria-label="Open Get Paid $15 details" href="#" id="gptp-details-link">Details</a>
+            <a aria-label="Open Challenge details" href="#" id="gptp-details-link">Details</a>
           </div>
-          <a aria-label="Sign out of this Get Paid $15 account on this device" href="#" id="gptp-signout-link">Sign Out</a>
+          <a aria-label="Sign out of this Challenge account on this device" href="#" id="gptp-signout-link">Sign Out</a>
         </div>
         <div id="ov-checks">
           <label id="remember-me">
@@ -6156,7 +6156,7 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
         </div>
         <div id="selector-panel">
           <div id="sel-display"><span id="sel-num">1</span></div>
-          <div id="sel-hint">Get Paid to Play drops you on a random level.</div>
+          <div id="sel-hint">Challenge drops you on a random level.</div>
           <button id="choose-level">Click to Pick a Level</button>
           <button id="sel-back">Back</button>
           <div id="sel-affirm"></div>
@@ -6182,7 +6182,7 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
               <div class="cp-div" style="left:60%"></div>
               <div class="cp-div" style="left:80%"></div>
             </div>
-            <div id="cp-reward">🎉 Get Paid $15</div>
+            <div id="cp-reward">🏆 All 150 Levels</div>
           </div>
           <div id="cp-ticks">
             <span>Ch 1<b class="cp-range">1–30</b></span><span>Ch 2<b class="cp-range">31–60</b></span><span>Ch 3<b class="cp-range">61–90</b></span><span>Ch 4<b class="cp-range">91–120</b></span><span>Ch 5<b class="cp-range">121–150</b></span>
@@ -6258,7 +6258,7 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
         <button id="pause" disabled><span id="pause-icon" class="pause-state-pause"></span><span class="pause-lock-badge"></span></button>
       </div>
       <div class="ctrl-row" id="gptp-signout-row">
-        <button id="signOutBtn" aria-label="Sign out of this Get Paid $15 account on this device">🚪 Sign Out</button>
+        <button id="signOutBtn" aria-label="Sign out of this Challenge account on this device">🚪 Sign Out</button>
       </div>
     </div>
   </footer>
@@ -6534,7 +6534,6 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
       <button class="shop-tab" data-cat="coins" role="tab">Coins</button>
       <button class="shop-tab" data-cat="special" role="tab">Specials</button>
       <button class="shop-tab" data-cat="wheel" role="tab">Big Wheel Spin</button>
-      <button class="shop-tab" data-cat="payments" role="tab">Withdraw</button>
       <button class="shop-tab shop-tab-sub" data-cat="sub" role="tab">Subscriptions</button>
     </div>
     <div id="shop-items"></div>
@@ -6545,25 +6544,24 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
 
 <!-- GPTP registration / sign-in -->
 <!-- GPTP intro / explainer (shown before registration) -->
-<div id="gptp-intro" role="dialog" aria-modal="true" aria-label="Get Paid to Play">
+<div id="gptp-intro" role="dialog" aria-modal="true" aria-label="Challenge">
   <div id="gptp-intro-card">
     <button class="popup-x" data-close="gptp-intro" aria-label="Close">✕</button>
     <div id="gi-scroll-hint" aria-hidden="true">▲<br>▼</div>
-    <h2>Get Paid $15 to Play</h2>
-    <p class="gi-lead">Finish all 150 levels and get paid <b>$15</b>.</p>
+    <h2>Challenge Mode</h2>
+    <p class="gi-lead">Can you clear all <b>150 levels</b>?</p>
     <h3 class="gi-steps-title">3 easy steps</h3>
     <div class="gi-steps">
       <div class="gi-step"><span class="gi-num">1</span><div><b>Sign up</b><br>Takes a minute.</div></div>
       <div class="gi-step"><span class="gi-num">2</span><div><b>Play</b><br>Progress saves to your account.</div></div>
-      <div class="gi-step"><span class="gi-num">3</span><div><b>Get paid $15</b><br>Clear all 150 levels.</div></div>
+      <div class="gi-step"><span class="gi-num">3</span><div><b>Beat the game</b><br>Clear all 150 levels.</div></div>
     </div>
     
     <div class="gi-foot">
-      <button id="gi-register">Sign Up to get paid $15</button>
+      <button id="gi-register">Sign Up to Play</button>
       <div id="gi-signin-prompt"><span class="reg-signin-label">Already signed up?</span> <a href="#" id="gi-signin-link">Sign in</a></div>
       <button id="gi-cancel" class="ghost-btn">Maybe later</button>
     </div>
-    <p class="gi-note">Note: payouts in this build are a demonstration — no real money is paid.</p>
   </div>
 </div>
 
@@ -6575,7 +6573,7 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
         <div class="reg-signin-label">Already signed up?</div>
         <a href="#" id="reg-signin-toggle">Sign In</a>
       </div>
-      <h2>Get Paid to Play</h2>
+      <h2>Challenge Mode</h2>
       <p id="reg-sub">Create your account. Sign in on any device.</p>
       <div class="reg-field"><label>Name</label><input id="reg-name" type="text" autocomplete="name" placeholder="Your name"></div>
       <div class="reg-field"><label>Email</label><input id="reg-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
@@ -6687,7 +6685,7 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
         <button class="acc-h" type="button">Game modes<span class="acc-i">+</span></button>
         <div class="acc-b"><ul class="details-list">
           <li><b>Fun Play:</b> Slower and relaxed. Great for kids and seniors.</li>
-          <li><b>Get Paid:</b> Fast and challenging. Finish all levels, get paid $15.</li>
+          <li><b>Challenge:</b> Fast and tough. Can you finish all 150 levels?</li>
           <li><b>Pregame:</b> Finish the pregame level first — at every game start, after Revive and after an ad.</li>
         </ul></div>
       </div>
@@ -6780,7 +6778,7 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
         <button class="acc-h" type="button">Saving<span class="acc-i">+</span></button>
         <div class="acc-b"><ul class="details-list">
           <li>Fun Play doesn't save progress.</li>
-          <li>Get Paid saves automatically. Levels 121–150: tap <b>SAVE</b>.</li>
+          <li>Challenge saves automatically. Levels 121–150: tap <b>SAVE</b>.</li>
           <li>Progress is deleted after 5 days of no play.</li>
         </ul></div>
       </div>
@@ -6806,7 +6804,6 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
       <div class="acc">
         <button class="acc-h" type="button">About this build<span class="acc-i">+</span></button>
         <div class="acc-b"><ul class="details-list details-note">
-          <li>Demo: no real money or ads.</li>
           <li>Build stamp: <b>18 Oct 2026 · build BI · all pop-up boxes narrower and sleeker (about 72-76% wide, max 300px), Revive and Level Complete boxes slimmer · Fun Play level complete order fixed · shooting tiles show one bullet icon per bullet left · flying objects 50% slower · Revive box shorter (66%), sized with exact pixels and a scale instead of zoom · bullet hit: explosion sound + board breaks in two, then the new life starts · in-game payment box: choose credit card, debit card, PayPal or e-Transfer · Adsterra banner in the video-ad box · Adsterra 320x50 banners (game strip + menu) · banner strip widened, banner fills the video box</b></li>
         </ul></div>
       </div>
@@ -6826,7 +6823,7 @@ html body #level-stars.gptp-stars{gap:6.6px !important;}
         <li><b>Move:</b> Mouse or ← → keys, or slide your finger.</li>
         <li><b>Aim:</b> Drag to aim. Tap to launch.</li>
         <li><b>Auto-launch:</b> The ball launches by itself after 8 seconds.</li>
-        <li><b>Lives:</b> A dropped ball costs a life. Fun Play 5, Get Paid 3.</li>
+        <li><b>Lives:</b> A dropped ball costs a life. Fun Play 5, Challenge 3.</li>
         <li><b>Coins & powerups:</b> Catch them with your board.</li>
         <li><b>Hazards:</b> Thunder tiles shake the screen. Shooting tiles (the ones with bullet icons) fire one burst of bullets straight down, so dodge them with your board -- or buy Remove Shooting Tiles in the Shop. Sliding tiles move side to side.</li>
         <li><b>Pause:</b> Space bar, double-tap, or the Pause button.</li>
@@ -8327,7 +8324,7 @@ function renderShop(){
   if(shopCat === 'sub'){
     const info = document.createElement('div');
     info.className = 'sub-info';
-    info.innerHTML = '<b>Subscriptions</b> (Get Paid mode)<br>Both plans remove all ads for 7 days. Your gift arrives automatically <b>once every day</b> while a subscription is active: powerups go into Available Powerups, and the coins are added to your balance. If both plans are active, you get both gifts.';
+    info.innerHTML = '<b>Subscriptions</b> (Challenge mode)<br>Both plans remove all ads for 7 days. Your gift arrives automatically <b>once every day</b> while a subscription is active: powerups go into Available Powerups, and the coins are added to your balance. If both plans are active, you get both gifts.';
     wrap.appendChild(info);
   }
   const shownItems = SHOP.filter(it => (it.cat || 'special') === shopCat)
@@ -10406,7 +10403,7 @@ function updateEnemyBullets(){
    Both modes have 150 levels. */
 const MODES = {
   fun:  { name:'Fun Play',           lives:5, ballBase:4.0, startTime:420, levels:150 },   // slowed back down ~13% -- had become too fast to track/follow
-  gptp: { name:'Get Paid to Play',   lives:3, ballBase:4.3, startTime:300, levels:150 }    // slowed back down ~13% -- had become too fast to track/follow; still ramps up per-level via speedMul() above so it stays lively, not boring
+  gptp: { name:'Challenge',   lives:3, ballBase:4.3, startTime:300, levels:150 }    // slowed back down ~13% -- had become too fast to track/follow; still ramps up per-level via speedMul() above so it stays lively, not boring
 };
 let mode = MODES.gptp;   // default until the player chooses
 
@@ -14852,7 +14849,7 @@ function syncHUD(){
     $('lv').textContent = '- Pregame';
     const chEl = $('chap'); if(chEl) chEl.textContent = '-';
   }
-  $('mode-hud') && ($('mode-hud').querySelector('b').textContent = (mode===MODES.fun ? 'Fun' : 'GP $15') + ' · Ch' + chapterOf(S.level).n);
+  $('mode-hud') && ($('mode-hud').querySelector('b').textContent = (mode===MODES.fun ? 'Fun' : 'Challenge') + ' · Ch' + chapterOf(S.level).n);
   updateTiles();
   const liveCount = Math.max(0, S.lives|0);
   $('lives').querySelector('b').textContent = liveCount === 0 ? '—'
@@ -19567,8 +19564,8 @@ function refreshGptpButton(){
   if(soBtn){
     soBtn.textContent = hasAccount ? '🚪 Sign Out' : '🔑 Sign In';
     soBtn.setAttribute('aria-label', hasAccount
-      ? 'Sign out of this Get Paid $15 account on this device'
-      : 'Sign in to your Get Paid $15 account');
+      ? 'Sign out of this Challenge account on this device'
+      : 'Sign in to your Challenge account');
   }
   // The device keeps a signed-in GPTP account until the player explicitly signs
   // out — closing the game (or the tab) does not sign them out on its own. So
@@ -20555,7 +20552,7 @@ function openSelector(completedLevel){
   if(modeNote){
     modeNote.textContent = completedLevel
       ? `Level ${completedLevel} complete! Pick your next random level:`
-      : 'Get Paid to Play — pick your random level:';
+      : 'Challenge — pick your random level:';
   }
   // The positive affirmation now plays full-screen before the selector opens (see
   // the GPTP branch in proceed()), so it's no longer duplicated here as a second,
