@@ -1,6 +1,6 @@
 /*
  * Called by the game's in-game payment box (card / PayPal).
- * Request:  POST { playerUid, itemHandles: [...], method: "card" | "paypal" }
+ * Request:  POST { playerUid, itemHandles: [...], method: "card" | "paypal", priceFactor?: 1 | 0.5 }
  * Response: { clientSecret, amount (cents), id }
  * The item is granted later by webhook.js, once Stripe confirms the payment.
  */
@@ -14,7 +14,7 @@ export function POST(request) {
   return run(request, async () => {
     const body = await readJson(request);
     const uid = playerUid(body.playerUid);
-    const items = resolveItems(body.itemHandles);
+    const items = resolveItems(body.itemHandles, body.priceFactor);
     if (isSubscription(items)) throw new ClientError('Subscriptions are paid on the secure checkout page.');
 
     const method = body.method || 'card';

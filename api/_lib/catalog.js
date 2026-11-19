@@ -66,8 +66,15 @@ export const CATALOG = {
   'subscribe-monthly':         { name: 'Monthly Subscription',             cents: 1299, interval: 'month' },
 };
 
+/**
+ * Fun Play sells everything at half price, so the game sends priceFactor 0.5 there.
+ * Only 1 and 0.5 are accepted; anything else is charged at full price, so a browser
+ * can never lower a price below what the game itself offers.
+ */
+export const priceFactor = (value) => (value === 0.5 ? 0.5 : 1);
+
 /** Checks the item handles sent by the game; throws ClientError for anything unknown or malformed. */
-export function resolveItems(handles) {
+export function resolveItems(handles, factor = 1) {
   if (!Array.isArray(handles) || handles.length < 1 || handles.length > 5) {
     throw new ClientError('Choose between 1 and 5 items.');
   }
@@ -75,7 +82,9 @@ export function resolveItems(handles) {
     if (typeof handle !== 'string' || !Object.hasOwn(CATALOG, handle)) {
       throw new ClientError('Unknown item: ' + (typeof handle === 'string' ? handle.slice(0, 60) : 'invalid'));
     }
-    return { handle, ...CATALOG[handle] };
+    const item = CATALOG[handle];
+    // per item, rounded to the cent -- the same way the game works out the price it shows
+    return { handle, ...item, cents: Math.round(item.cents * priceFactor(factor)) };
   });
 }
 

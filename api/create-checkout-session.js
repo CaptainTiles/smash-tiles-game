@@ -27,7 +27,7 @@ export function POST(request) {
   return run(request, async () => {
     const body = await readJson(request);
     const uid = playerUid(body.playerUid);
-    const items = resolveItems(body.itemHandles);
+    const items = resolveItems(body.itemHandles, body.priceFactor);
     const returnUrl = safeReturnUrl(body.returnUrl);
     const subscription = isSubscription(items);
     if (subscription && items.length !== 1) throw new ClientError('A subscription must be bought on its own.');
